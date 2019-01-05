@@ -1,0 +1,11 @@
+[
+  {
+    "outputFileName": "Resources/Bundle.js",
+    "inputFiles": [
+      "Resources/Source/jquery-3.2.1.min.js",
+      "Resources/Source/jquery.tablesorter.min.js",
+      "Resources/Source/highlight.pack.js",
+      "Resources/Source/Scripts.js"
+    ]
+  }
+]

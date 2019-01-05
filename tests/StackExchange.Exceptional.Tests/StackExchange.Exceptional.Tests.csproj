@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net461;netcoreapp2.0</TargetFrameworks>
+    <AssemblyName>StackExchange.Exceptional.Tests</AssemblyName>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\StackExchange.Exceptional.Shared\StackExchange.Exceptional.Shared.csproj" />
+    <ProjectReference Include="..\..\src\StackExchange.Exceptional.MySQL\StackExchange.Exceptional.MySQL.csproj" />
+    <ProjectReference Include="..\..\src\StackExchange.Exceptional.PostgreSql\StackExchange.Exceptional.PostgreSql.csproj" />
+    <ProjectReference Include="..\..\src\StackExchange.Exceptional.MongoDB\StackExchange.Exceptional.MongoDB.csproj" />
+    <PackageReference Include="Jil" Version="2.15.4" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Update="*.json" CopyToOutputDirectory="Always" />
+    <EmbeddedResource Include="*Config.json" />
+    <EmbeddedResource Include="..\..\DBScripts\*.sql" Link="Scripts\%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

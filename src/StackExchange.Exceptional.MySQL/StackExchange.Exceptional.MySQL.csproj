@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>StackExchange.Exceptional.MySQL</AssemblyName>
+    <Description>MySQL storage provider for StackExchange.Exceptional</Description>
+    <PackageTags>SQL MySQL Exception Handler Errors Stack Exchange Exceptional</PackageTags>
+    <TargetFrameworks>net461;netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StackExchange.Exceptional.Shared\StackExchange.Exceptional.Shared.csproj" />
+    <PackageReference Include="Dapper" Version="1.50.2" />
+    <PackageReference Include="MySqlConnector" Version="0.25.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+</Project>
